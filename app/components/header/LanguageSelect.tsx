@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const LanguageDropdown = () => {
@@ -39,8 +40,8 @@ const LanguageDropdown = () => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-1 max-w-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
-          style={{ width: "max-content", minWidth: "100%" }}
+          className="origin-top-right absolute right-0 mt-1 max-w-24 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 mr-5"
+          style={{ width: "max-content", minWidth: "6rem" }}
         >
           <div
             className="py-1"
@@ -49,10 +50,10 @@ const LanguageDropdown = () => {
             aria-labelledby="options-menu"
           >
             {languages.map((language) => (
-              <a
+              <Link
                 key={language}
                 href="#"
-                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 flex flex-row"
+                className="text-gray-700 max-w-24 px-4 py-2 text-sm hover:bg-gray-100 flex flex-row"
                 role="menuitem"
                 onClick={(e) => {
                   e.preventDefault();
@@ -67,7 +68,7 @@ const LanguageDropdown = () => {
                     height={20}
                 />
                 <p className="ml-2">{language}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

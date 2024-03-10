@@ -15,7 +15,6 @@ const Header = () => {
             alt="Logo"
             width={180}
             height={180}
-            objectFit="contain"
           />
         </Link>
       </div>
