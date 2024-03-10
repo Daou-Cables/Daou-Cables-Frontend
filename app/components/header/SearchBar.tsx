@@ -3,7 +3,7 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center drop-shadow-lg py-2 px-4 shadow-sm bg-white ml-4">
+    <div className="flex items-center drop-shadow-lg py-2 px-4 shadow-sm bg-white ml-4 mr-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

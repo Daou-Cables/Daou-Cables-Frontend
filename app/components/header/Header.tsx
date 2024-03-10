@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
+import LanguageDropdown from "./LanguageSelect";
 
 const Header = () => {
   return (
@@ -23,6 +24,7 @@ const Header = () => {
         <div className="text-gray-600 flex flex-row">
           <Navbar />
           <SearchBar />
+          <LanguageDropdown />
         </div>
       </div>
     </div>
