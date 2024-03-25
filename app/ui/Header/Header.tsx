@@ -7,7 +7,7 @@ import LanguageDropdown from "./LanguageSelect";
 
 const Header = () => {
     return (
-        <div className="bg-white shadow-md flex items-center justify-between px-12 z-50">
+        <div className="bg-white shadow-md flex items-center justify-between sm:px-12 z-50">
             <div className="flex items-center relative">
                 <Link href="/" passHref>
                     <Image
