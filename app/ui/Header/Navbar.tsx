@@ -7,7 +7,7 @@ const Navbar = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <>
+        <div className="flex items-center justify-center">
             <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <div className="flex md:hidden justify-center items-center sm:mr-8">
                 <button
@@ -64,7 +64,7 @@ const Navbar = () => {
                     transform: rotate(-45deg);
                 }
             `}</style>
-        </>
+        </div>
     );
 };
 

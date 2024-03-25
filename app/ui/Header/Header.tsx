@@ -20,13 +20,13 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
                 <div className="flex flex-row text-gray-600 md:hidden">
                     <LanguageDropdown />
                     <Navbar />
                 </div>
 
-                <div className="hidden md:flex flex-row text-gray-600">
+                <div className="hidden md:flex flex-row text-gray-600 items-center justify-center">
                     <Navbar />
                     <LanguageDropdown />
                 </div>

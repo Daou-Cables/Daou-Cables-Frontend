@@ -66,8 +66,8 @@ export default function FooterTop() {
         },
     ];
     return (
-        <div className="p-4 md:p-24 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12">
-            <div className="flex justify-between w-full sm:pr-48">
+        <div className="p-4 md:p-24 flex flex-row md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12">
+            <div className="flex md:justify-between w-full md:pr-48 flex-col md:flex-row">
                 <div>
                     <span className="font-medium text-l sm:text-xl mb-1">
                         About Us
@@ -77,6 +77,41 @@ export default function FooterTop() {
                             <li
                                 key={item.title}
                                 className="underline text-sm sm:text-base mb-1"
+                            >
+                                <Link href={item.href}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="mt-16 md:mt-0">
+                    <span className="font-medium text-l sm:text-xl mb-8">
+                        Contact Us
+                    </span>
+                    <ul>
+                        {contactUs.map((item) => (
+                            <li
+                                key={item.key}
+                                className="text-xs sm:text-base mb-1"
+                            >
+                                <span className="font-medium">
+                                    {item.key}:{" "}
+                                </span>
+                                <span>{item.value}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="flex w-full flex-col md:flex-row md:justify-between">
+                <div>
+                    <span className="font-medium text-base sm:text-xl mb-1">
+                        Submit an Inquiry
+                    </span>
+                    <ul className="pl-8 list-disc">
+                        {submitAnInquiry.map((item) => (
+                            <li
+                                key={item.title}
+                                className="underline text-xs sm:text-base mb-1"
                             >
                                 <Link href={item.href}>{item.title}</Link>
                             </li>
@@ -94,38 +129,6 @@ export default function FooterTop() {
                                 className="underline text-sm sm:text-base mb-1"
                             >
                                 <Link href={item.href}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-            <div className="flex justify-between w-full">
-                <div>
-                    <span className="font-medium text-base sm:text-xl mb-1">
-                        Submit an Inquiry
-                    </span>
-                    <ul className="pl-8 list-disc">
-                        {submitAnInquiry.map((item) => (
-                            <li
-                                key={item.title}
-                                className="underline text-xs sm:text-base mb-1"
-                            >
-                                <Link href={item.href}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="pl-11">
-                    <span className="font-medium text-l sm:text-xl mb-8">
-                        Contact Us
-                    </span>
-                    <ul>
-                        {contactUs.map((item) => (
-                            <li key={item.key} className="text-xs sm:text-base mb-1">
-                                <span className="font-medium">
-                                    {item.key}:{" "}
-                                </span>
-                                <span>{item.value}</span>
                             </li>
                         ))}
                     </ul>

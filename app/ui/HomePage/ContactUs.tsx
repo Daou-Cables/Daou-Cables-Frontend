@@ -11,7 +11,7 @@ export default function ContactUs({}: Props) {
                 <SectionTitle title="Contact Us" />
             </div>
             <div>
-                <p className="mt-12 text-lg flex items-center justify-center mb-16">
+                <p className="text-center mt-12 text-lg flex items-center justify-center mb-14">
                     Your email here for inquiries and support
                 </p>
             </div>

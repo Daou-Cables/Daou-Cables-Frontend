@@ -11,6 +11,7 @@ type Props = {
 
 const Menu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
     const [activeTab, setActiveTab] = useState("Home");
+    const [hoveredTab, setHoveredTab] = useState("Home");
     const tabs: Tab[] = [
         {
             title: "Home",
@@ -31,19 +32,26 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
     ];
     return (
         <>
-            <div className="justify-center space-x-4 py-2 md:flex hidden">
+            <div className="justify-center items-center space-x-4 py-2 md:flex hidden">
                 {tabs.map((tab) => (
                     <div key={tab.title} className="relative h-7">
                         <Link
                             href={tab.link}
                             onClick={() => setActiveTab(tab.title)}
                             className="pb-1 text-black mr-2"
+                            onMouseEnter={() => setHoveredTab(tab.title)}
+                            onMouseLeave={() => setHoveredTab("")}
                         >
                             {tab.title}
                         </Link>
-                        {activeTab === tab.title && (
-                            <div className="absolute bottom-0 h-[2px] w-3/5 bg-black transform skew-x-12" />
-                        )}
+                        <div
+                            className={`absolute bottom-0 w-3/5 bg-black transform -skew-x-12 transition-all duration-200 ${
+                                activeTab === tab.title ||
+                                hoveredTab === tab.title
+                                    ? "h-[2px]"
+                                    : "h-[0px]"
+                            }`}
+                        />
                     </div>
                 ))}
                 <SearchBar />

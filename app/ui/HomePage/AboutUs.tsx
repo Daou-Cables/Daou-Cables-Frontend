@@ -29,7 +29,9 @@ export default function AboutUs() {
               temporibus?
             </p>
           </div>
-          <Button title="Learn More" url="/about-us" className="mt-32"/>
+          <div className="flex items-center justify-center sm:block">
+            <Button title="Learn More" url="/about-us" className="mt-32"/>
+          </div>
         </div>
       </div>
     </div>
