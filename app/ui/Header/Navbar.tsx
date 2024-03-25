@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <>
             <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            <div className="flex md:hidden justify-center items-center mr-8">
+            <div className="flex md:hidden justify-center items-center sm:mr-8">
                 <button
                     onClick={toggleMenu}
                     className={`p-2 menu-button ${isMenuOpen ? "open" : ""}`}

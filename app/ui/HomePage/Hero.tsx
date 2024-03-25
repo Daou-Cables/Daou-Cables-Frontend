@@ -10,7 +10,7 @@ export default async function Hero() {
         return <BillBoardSkeleton />;
     }
     return (
-        <div className="w-full h-[550px] relative">
+        <div className="w-full h-[450px] sm:h-[550px] relative mt-28">
             <Image
                 src={billboard}
                 alt="Picture of the author"
