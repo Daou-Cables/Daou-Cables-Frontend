@@ -8,7 +8,7 @@ export default function AboutUs() {
     <div className="flex flex-col items-center justify-center">
       <SectionTitle title="About Us" />
 
-      <div className="mt-20 flex flex-col items-center space-y-10 md:space-y-0 md:flex-row">
+      <div className="mt-20 flex flex-col md:items-center space-y-10 md:space-y-0 md:flex-row">
         <Image
           className="flex-1"
           src="/images/AboutUs.png"
