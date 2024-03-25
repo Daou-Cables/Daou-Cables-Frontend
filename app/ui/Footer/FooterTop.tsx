@@ -66,58 +66,70 @@ export default function FooterTop() {
         },
     ];
     return (
-        <div className="p-24 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-12">
-            <div>
-                <span className="font-medium text-xl mb-1">About Us</span>
-                <ul className="pl-8 list-disc">
-                    {aboutUs.map((item) => (
-                        <li
-                            key={item.title}
-                            className="underline text-base mb-1"
-                        >
-                            <Link href={item.href}>{item.title}</Link>
-                        </li>
-                    ))}
-                </ul>
+        <div className="p-4 md:p-24 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12">
+            <div className="flex justify-between w-full sm:pr-48">
+                <div>
+                    <span className="font-medium text-l sm:text-xl mb-1">
+                        About Us
+                    </span>
+                    <ul className="pl-8 list-disc">
+                        {aboutUs.map((item) => (
+                            <li
+                                key={item.title}
+                                className="underline text-sm sm:text-base mb-1"
+                            >
+                                <Link href={item.href}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <span className="font-medium text-l sm:text-xl mb-1">
+                        Products
+                    </span>
+                    <ul className="pl-8 list-disc">
+                        {products.map((item) => (
+                            <li
+                                key={item.title}
+                                className="underline text-sm sm:text-base mb-1"
+                            >
+                                <Link href={item.href}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-            <div>
-                <span className="font-medium text-xl mb-1">Products</span>
-                <ul className="pl-8 list-disc">
-                    {products.map((item) => (
-                        <li
-                            key={item.title}
-                            className="underline text-base mb-1"
-                        >
-                            <Link href={item.href}>{item.title}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div>
-                <span className="font-medium text-xl mb-1">
-                    Submit an Inquiry
-                </span>
-                <ul className="pl-8 list-disc">
-                    {submitAnInquiry.map((item) => (
-                        <li
-                            key={item.title}
-                            className="underline text-base mb-1"
-                        >
-                            <Link href={item.href}>{item.title}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div>
-                <span className="font-medium text-xl mb-8">Contact Us</span>
-                <ul>
-                    {contactUs.map((item) => (
-                        <li key={item.key} className="text-base mb-1">
-                            <span className="font-medium">{item.key}: </span>
-                            <span>{item.value}</span>
-                        </li>
-                    ))}
-                </ul>
+            <div className="flex justify-between w-full">
+                <div>
+                    <span className="font-medium text-base sm:text-xl mb-1">
+                        Submit an Inquiry
+                    </span>
+                    <ul className="pl-8 list-disc">
+                        {submitAnInquiry.map((item) => (
+                            <li
+                                key={item.title}
+                                className="underline text-xs sm:text-base mb-1"
+                            >
+                                <Link href={item.href}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="pl-11">
+                    <span className="font-medium text-l sm:text-xl mb-8">
+                        Contact Us
+                    </span>
+                    <ul>
+                        {contactUs.map((item) => (
+                            <li key={item.key} className="text-xs sm:text-base mb-1">
+                                <span className="font-medium">
+                                    {item.key}:{" "}
+                                </span>
+                                <span>{item.value}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );
