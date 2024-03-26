@@ -11,14 +11,6 @@ const WhoWeAre = (props: Props) => {
                 <SectionTitle title="Who We Are" />
             </div>
             <div className="pt-20 flex flex-col md:flex-row justify-between items-center md:px-40 space-x-0 md:space-x-20">
-                <div className="flex items-center justify-center w-full md:w-1/2">
-                    <Image
-                        src="/images/WhoWeAre.png"
-                        alt="Who We Are"
-                        height={750}
-                        width={750}
-                    />
-                </div>
                 <div className="mt-8 sm:mt-12 h-full w-full md:w-1/2 md:px-0">
                     <p className="text-xl sm:text-2xl md:text-4xl">
                         Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -28,6 +20,14 @@ const WhoWeAre = (props: Props) => {
                         explicabo ipsa iste dignissimos inventore obcaecati, ut
                         numquam.
                     </p>
+                </div>
+                <div className="flex items-center justify-center w-full md:w-1/2">
+                    <Image
+                        src="/images/WhoWeAre.png"
+                        alt="Who We Are"
+                        height={750}
+                        width={750}
+                    />
                 </div>
             </div>
         </div>
