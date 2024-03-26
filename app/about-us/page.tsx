@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../ui/AboutUsPage/Hero";
 import AtAGlance from "../ui/AboutUsPage/AtAGlance";
 import SectionWithText from "../ui/General/SectionWithText";
+import OurCulture from "../ui/AboutUsPage/OurCulture";
 
 type Props = {};
 
@@ -28,7 +29,8 @@ export default function AboutUs({}: Props) {
                 fuga rem voluptatibus, fugiat quisquam minima explicabo
                 ipsa iste dignissimos inventore obcaecati, ut numquam."
                 reversed
-            />
+        />
+        <OurCulture />
         </div>
     );
 }
