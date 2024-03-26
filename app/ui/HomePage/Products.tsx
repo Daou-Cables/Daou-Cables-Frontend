@@ -2,9 +2,15 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import { ProductCardSkeleton } from "../skeletons";
 import { getProducts } from "@/app/lib/services/MainServices";
+import { Product } from "@/app/lib/definitions";
 
 export default async function Products() {
-    const products = await getProducts();
+    let products: Product[] | null[] = [null, null, null];
+    try {
+        products = await getProducts();
+    } catch (error) {
+        // TODO: Handle error
+    }
 
     return (
         <div>
