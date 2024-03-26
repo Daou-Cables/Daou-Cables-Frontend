@@ -1,6 +1,6 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
-import EmailForm from "./EmailForm";
+import SectionTitle from "../HomePage/SectionTitle";
+import EmailForm from "../HomePage/EmailForm";
 
 type Props = {};
 
