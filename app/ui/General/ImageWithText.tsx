@@ -14,8 +14,8 @@ function ImageWithText({ url, alt, text, reversed = false }: Props) {
             <div className="pt-20 flex flex-col md:flex-row justify-between items-center md:px-40 space-x-0 md:space-x-20">
                 <div
                     className={`${
-                        reversed ? "hidden" : ""
-                    } mt-8 flex items-center justify-center w-full md:w-1/2`}
+                        reversed ? "md:hidden" : ""
+                    } flex items-center justify-center w-full md:w-1/2`}
                 >
                     <Image src={url} alt={alt} height={750} width={750} />
                 </div>
@@ -23,8 +23,8 @@ function ImageWithText({ url, alt, text, reversed = false }: Props) {
                     <p className="text-xl sm:text-2xl md:text-4xl">{text}</p>
                 </div>
                 <div
-                    className={`${
-                        reversed ? "" : "hidden"
+                    className={`hidden ${
+                        reversed ? "md:block" : ""
                     } mt-8 flex items-center justify-center w-full md:w-1/2`}
                 >
                     <Image src={url} alt={alt} height={750} width={750} />
