@@ -7,7 +7,10 @@ import Footer from "./ui/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Daou Cables",
+    title: {
+        template: "%s | Daou Cables",
+        default: "Daou Cables",
+    },
     description: "",
 };
 
@@ -20,7 +23,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <Header />
-                {children}
+                <div className="pt-24">{children}</div>
                 <Footer />
             </body>
         </html>
