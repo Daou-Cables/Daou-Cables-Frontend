@@ -1,5 +1,5 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../General/SectionTitle";
 import Button from "./Button";
 import Image from "next/image";
 

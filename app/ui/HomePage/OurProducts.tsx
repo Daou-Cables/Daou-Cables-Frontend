@@ -1,6 +1,6 @@
 import React from "react";
 import Products from "./Products";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../General/SectionTitle";
 import Button from "./Button";
 
 export default function OurProducts() {
