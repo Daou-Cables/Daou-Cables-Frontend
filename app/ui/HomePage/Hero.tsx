@@ -1,12 +1,22 @@
 import Image from "next/image";
 import React from "react";
-import { getBillboard } from "@/app/lib/services/MainServices";
+import {
+    getBillBoardMobile,
+    getBillboard,
+} from "@/app/lib/services/MainServices";
 import { BillBoardSkeleton } from "@/app/ui/skeletons";
 
 export default async function Hero() {
-    const billboard = await getBillboard();
+    let billboard = null;
+    let billboardMobile = null;
+    try {
+        billboard = await getBillboard();
+        billboardMobile = await getBillBoardMobile();
+    } catch (error) {
+        // TODO: Handle error
+    }
 
-    if (!billboard) {
+    if (!billboard || !billboardMobile) {
         return <BillBoardSkeleton />;
     }
     return (
@@ -16,6 +26,14 @@ export default async function Hero() {
                 alt="Picture of the author"
                 layout="fill"
                 objectFit="cover"
+                className="hidden sm:block"
+            />
+            <Image
+                src={billboardMobile}
+                alt="Picture of the author"
+                layout="fill"
+                objectFit="cover"
+                className="sm:hidden"
             />
             <div className="absolute inset-x-0 bottom-[10%] flex flex-col px-5 sm:px-20">
                 <h1 className="text-xl sm:text-2xl font-bold mb-1">

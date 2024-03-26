@@ -45,3 +45,9 @@ export const getVideo = async (): Promise<string> => {
     );
     return response.data;
 };
+
+export const getBillBoardMobile = async (): Promise<string> => {
+    const response: AxiosResponse<string, AxiosError> =
+        await axiosInstance.get("/getBillBoardMb");
+    return response.data;
+}
