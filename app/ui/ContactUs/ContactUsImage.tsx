@@ -6,7 +6,7 @@ type Props = {};
 
 const ContactUsImage = (props: Props) => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-full">
       <Image
         src="/images/ContactUsImage.png"
         alt="Contact Us Image"
@@ -14,7 +14,7 @@ const ContactUsImage = (props: Props) => {
         height={500}
         className="skew-x-2"
       />
-      <div className="pl-1 w-[456px] h-[500px] absolute inset-0">
+      <div className="px-1 absolute inset-0 sm:w-[460px]">
         <BannerOverlay />
       </div>
     </div>

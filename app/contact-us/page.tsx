@@ -12,9 +12,14 @@ export default function ContactUsPage({}: Props) {
       <div className="space-y-14">
         <PageHeader title="Contact Us" subTitle1="Daou Cables Manufacturing" />
         <Head />
-        <div className="flex w-full h-full items-start justify-center gap-12">
+        <div className="md:flex w-full h-full items-start justify-center gap-12">
+          <div className="w-full md:w-0 md:hidden mb-12 md:mb-0">
+            <ContactUsImage />
+          </div>
           <ContactUsForm />
-          <ContactUsImage />
+          <div className="hidden md:block md:w-full">
+            <ContactUsImage />
+          </div>
         </div>
       </div>
     </div>

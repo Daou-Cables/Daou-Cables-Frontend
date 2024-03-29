@@ -5,7 +5,7 @@ import SendButton from "./SendButton";
 
 const ContactUsForm = () => {
   return (
-      <form action="" className="space-y-8 w-full">
+      <form action="" className="space-y-8 w-full mt-12 sm:mt-0">
         <InputField icon="/icons/NameField.svg" placeholder="Your Name" />
         <InputField icon="/icons/email.svg" placeholder="Your Email" />
         <InputField
