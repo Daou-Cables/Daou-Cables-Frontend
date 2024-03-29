@@ -3,33 +3,45 @@ import SearchBar from "./SearchBar";
 import SideBar from "./SideBar";
 import { Tab } from "@/app/lib/definitions";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Props = {
     isMenuOpen: boolean;
     setIsMenuOpen: (isOpen: boolean) => void;
 };
 
+const tabs: Tab[] = [
+    {
+        title: "Home",
+        link: "/",
+    },
+    {
+        title: "About Us",
+        link: "/about-us",
+    },
+    {
+        title: "Products",
+        link: "/products",
+    },
+    {
+        title: "Contact Us",
+        link: "/contact-us",
+    },
+];
+
+const getCurrentTab = (pathName: string) => {
+    const currentTab = tabs.find(tab => tab.link === pathName.toString());
+    return currentTab ? currentTab.title : "Home";
+}
+
 const Menu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
-    const [activeTab, setActiveTab] = useState("Home");
-    const [hoveredTab, setHoveredTab] = useState("Home");
-    const tabs: Tab[] = [
-        {
-            title: "Home",
-            link: "/",
-        },
-        {
-            title: "About Us",
-            link: "/about-us",
-        },
-        {
-            title: "Products",
-            link: "/products",
-        },
-        {
-            title: "Contact Us",
-            link: "/contact-us",
-        },
-    ];
+    const pathName = usePathname();
+    const currentTab = getCurrentTab(pathName);
+
+    const [activeTab, setActiveTab] = useState(currentTab);
+    
+    const [hoveredTab, setHoveredTab] = useState(currentTab);
+    
     return (
         <>
             <div className="justify-center items-center space-x-4 py-2 md:flex hidden">
