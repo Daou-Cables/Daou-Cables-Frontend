@@ -5,8 +5,7 @@ import SendButton from "./SendButton";
 
 const ContactUsForm = () => {
   return (
-    <div>
-      <form action="" className="space-y-8">
+      <form action="" className="space-y-8 w-full">
         <InputField icon="/icons/NameField.svg" placeholder="Your Name" />
         <InputField icon="/icons/email.svg" placeholder="Your Email" />
         <InputField
@@ -15,10 +14,8 @@ const ContactUsForm = () => {
           placeholder="Tell us about your inquiry"
           wide={true}
         />
-        
         <SendButton />
       </form>
-    </div>
   );
 };
 

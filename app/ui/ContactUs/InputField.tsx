@@ -19,7 +19,7 @@ const InputField = ({ icon, placeholder, wide = false, customWidth }: Props) => 
             className='self-start'
         />
         {wide || <input type="text" placeholder={placeholder} className='bg-inherit text-base outline-none w-full'/>}
-        {wide && <textarea rows={4} placeholder={placeholder} style={{
+        {wide && <textarea rows={12} placeholder={placeholder} style={{
           marginLeft: 10
         }} className='bg-inherit text-base outline-none w-full'/>}
     </div>
