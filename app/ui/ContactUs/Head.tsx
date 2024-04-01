@@ -1,15 +1,18 @@
-import React from 'react'
-import SectionTitle from '../General/SectionTitle'
+import React from "react";
+import SectionTitle from "../General/SectionTitle";
 
-type Props = {}
+type Props = {
+  title: string;
+  body: string;
+};
 
-const Head = (props: Props) => {
+const Head = ({ title, body }: Props) => {
   return (
     <div>
-        <SectionTitle title="Let's talk about your project" />
-        <p className='mt-8 text-lg sm:text-2xl md:w-1/2'>Please submit your purchasing inquiry so we can provide detailed product information and pricing</p>
+      <SectionTitle title={title} />
+      <p className="mt-8 text-lg sm:text-2xl">{body}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Head
+export default Head;
