@@ -1,17 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import {
-    getBillBoardMobile,
-    getBillboard,
-} from "@/app/lib/services/MainServices";
+import { getBillBoard, getMobileBillBoard } from "@/app/lib/services/MediaServices";
 import { BillBoardSkeleton } from "@/app/ui/skeletons";
 
 export default async function Hero() {
     let billboard = null;
     let billboardMobile = null;
     try {
-        billboard = await getBillboard();
-        billboardMobile = await getBillBoardMobile();
+        billboard = await getBillBoard();
+        billboardMobile = await getMobileBillBoard();
     } catch (error) {
         // TODO: Handle error
     }

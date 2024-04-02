@@ -6,12 +6,12 @@ type Props = {};
 
 const ContactUs = (props: Props) => {
   return (
-    <div className="md:flex w-full h-full items-start justify-center gap-12 mt-12">
+    <div className="md:flex h-full items-start gap-12 mt-12">
       <div className="w-full md:w-0 md:hidden mb-12 md:mb-0">
         <ContactUsImage />
       </div>
       <ContactUsForm />
-      <div className="hidden md:block md:w-full">
+      <div className="hidden md:block">
         <ContactUsImage />
       </div>
     </div>

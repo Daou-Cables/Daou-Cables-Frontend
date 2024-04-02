@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { ProductCardSkeleton } from "../skeletons";
-import { getProducts } from "@/app/lib/services/MainServices";
+import { getProducts } from "@/app/lib/services/ProductServices";
 import { Product } from "@/app/lib/definitions";
 
 export default async function Products() {

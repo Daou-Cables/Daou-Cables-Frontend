@@ -1,4 +1,4 @@
-import { getVideo } from "@/app/lib/services/MainServices";
+import { getVideo } from "@/app/lib/services/MediaServices";
 import React from "react";
 
 type Props = {};

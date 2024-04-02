@@ -1,12 +1,22 @@
+import { getContacts } from "@/app/lib/services/ContactsService";
 import ContactIcon from "./ContactIcon";
 import Head from "./Head";
 import React from "react";
+import { ContactUsData } from "@/app/lib/definitions";
+import Link from "next/link";
 
 type Props = {};
 
-const ReachUs = (props: Props) => {
+const ReachUs = async (props: Props) => {
+  let contactData: ContactUsData | null = null;
+  try {
+    contactData = await getContacts();
+    console.log(contactData);
+  } catch (error) {
+    console.log(error);
+  }
   return (
-    <div className="flex flex-col md:flex-row items-center pb-44">
+    <div className="flex flex-col md:flex-row items-center pb-44 pt-24">
       <div className="w-full md:w-1/2">
         <Head
           title="Reach Out to Us"
@@ -14,24 +24,33 @@ const ReachUs = (props: Props) => {
         />
         <div className="pt-12">
           <p>
-            <span className="font-bold">Tel:</span>+86-571-20144
+            <span className="font-bold">Tel:</span>
+            {contactData?.phone[0]}
           </p>
           <p>
-            <span className="font-bold">Fax:</span>+86-124-1515a
+            <span className="font-bold">Fax:</span>
+            {contactData?.fax[0]}
           </p>
         </div>
         <div className="pt-12 space-x-4 flex">
-          <ContactIcon url="/icons/WeChat.svg" />
-          <ContactIcon url="/icons/Instagram.svg" />
-          <ContactIcon url="/icons/Facebook.svg" />
-          <ContactIcon url="/icons/EmailWhite.svg" />
+          <Link href={`${contactData?.wechat[0]}`} passHref>
+            <ContactIcon url="/icons/WeChat.svg" />
+          </Link>
+          <Link href={`${contactData?.instagram}`} passHref>
+            <ContactIcon url="/icons/Instagram.svg" />
+          </Link>
+          <Link href={`${contactData?.facebook}`} passHref>
+            <ContactIcon url="/icons/Facebook.svg" />
+          </Link>
+          <Link href={`mailto:${contactData?.email[0]}`} passHref>
+            <ContactIcon url="/icons/EmailWhite.svg" />
+          </Link>
         </div>
       </div>
-      <div className="w-full md:w-1/4 pt-12 relative ml-0 md:ml-8">
-        <div style={{ paddingBottom: "100%" }}></div>
+      <div className="w-full md:w-1/4 ml-0 md:ml-14">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52984.81091727007!2d35.48947769433121!3d33.901223983453036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f16c2c5c430e5%3A0xa97c7dfbc9de573b!2sZaitunay%20Bay!5e0!3m2!1sen!2slb!4v1711991163723!5m2!1sen!2slb"
-          className="border-none w-full h-full absolute top-0 left-0 mt-12 md:mt-0"
+          className="border-none w-full md:w-[452px] h-[500px] mt-12 md:mt-0"
           loading="lazy"
         ></iframe>
       </div>
