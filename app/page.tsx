@@ -4,6 +4,7 @@ import MyProducts from "./ui/HomePage/OurProducts";
 import { Suspense } from "react";
 import { BillBoardSkeleton } from "./ui/skeletons";
 import ContactUs from "./ui/General/ContactUs";
+import OurSolutions from "./ui/HomePage/OurSolutions";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             </Suspense>
             <MyProducts />
             <AboutUs />
+            <OurSolutions />
             <ContactUs />
         </div>
     );

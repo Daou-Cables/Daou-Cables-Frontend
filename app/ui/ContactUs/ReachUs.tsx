@@ -49,7 +49,7 @@ const ReachUs = async (props: Props) => {
       </div>
       <div className="w-full md:w-1/4 ml-0 md:ml-14">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52984.81091727007!2d35.48947769433121!3d33.901223983453036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f16c2c5c430e5%3A0xa97c7dfbc9de573b!2sZaitunay%20Bay!5e0!3m2!1sen!2slb!4v1711991163723!5m2!1sen!2slb"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d718574.936391318!2d119.30520821442758!3d30.207410980260228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344b7215119c3f41%3A0xe309a3a43af0b80!2sZhou%20Qing%20Xian%2C%20Hang%20Zhou%20Shi%2C%20China%2C%20311121!5e0!3m2!1sen!2slb!4v1712133806229!5m2!1sen!2slb"
           className="border-none w-full md:w-[452px] h-[500px] mt-12 md:mt-0"
           loading="lazy"
         ></iframe>
