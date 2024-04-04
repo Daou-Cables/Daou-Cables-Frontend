@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { BillBoardSkeleton } from "./ui/skeletons";
 import ContactUs from "./ui/General/ContactUs";
 import OurSolutions from "./ui/HomePage/OurSolutions";
+import News from "./ui/HomePage/News";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <MyProducts />
             <AboutUs />
             <OurSolutions />
+            <News />
             <ContactUs />
         </div>
     );
