@@ -18,7 +18,8 @@ export default function SectionTitle({ title, dark = false }: Props) {
       <div
         className={`${
           dark ? "bg-white" : "bg-[#1E1E1E]"
-        } h-[4px] sm:h-[6px] mt-2 transform -skew-x-12 w-[60%]`}
+        } h-[3px] sm:h-[4px] mt-1 transform w-[60%]`}
+        style={{ transform: "skewX(-45deg)" }}
       />
     </div>
   );
