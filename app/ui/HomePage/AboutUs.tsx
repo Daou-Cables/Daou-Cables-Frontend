@@ -5,18 +5,21 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col">
       <SectionTitle title="About Us" />
 
-      <div className="mt-20 flex flex-col md:items-center space-y-10 md:space-y-0 md:flex-row">
-        <Image
-          className="flex-1"
-          src="/images/AboutUs.png"
-          alt="placeholder"
-          width={700}
-          height={537}
-        />
-        <div className="flex-1 md:ml-36">
+      <div className="mt-20 flex flex-col md:items-stretch  space-y-10 md:space-y-0 md:justify-between  md:flex-row">
+        <div className="md:w-[50%]">
+          <Image
+            className="max-w-[550px] w-full object-contain"
+            src="/images/AboutUs.png"
+            alt="placeholder"
+            width={700}
+            height={537}
+            objectFit="contain"
+          />
+        </div>
+        <div className="md:w-[50%] md:ml-8 flex flex-col justify-between py-6">
           <div>
             <h4 className="text-3xl">Why Choose Us?</h4>
             <p className="text-base mt-10 max-w-xl">
@@ -31,7 +34,7 @@ export default function AboutUs() {
           </div>
           <div className="flex items-center justify-center sm:block">
             <Button
-              className="mt-48 sm:w-46 p-2"
+              className="sm:w-46 p-2"
               title="Learn More"
               url="/about-us"
             />

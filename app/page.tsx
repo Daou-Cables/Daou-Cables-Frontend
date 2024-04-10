@@ -16,7 +16,7 @@ export default function Home() {
       <MyProducts />
       <AboutUs />
       <OurSolutions />
-      <News />
+      {/* <News /> */}
       <ContactUs />
     </div>
   );
