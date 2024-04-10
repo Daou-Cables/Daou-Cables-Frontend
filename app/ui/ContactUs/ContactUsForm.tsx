@@ -10,7 +10,7 @@ const initialState = {
   name: "",
   email: "",
   message: "",
-}
+};
 
 const ContactUsForm = () => {
   const [state, formAction] = useFormState(contactUs, initialState);
@@ -19,25 +19,40 @@ const ContactUsForm = () => {
   const [message, setMessage] = React.useState("");
 
   return (
-      <form action={(formData: FormData) => {
+    <form
+      action={(formData: FormData) => {
         setName("");
         setEmail("");
         setMessage("");
         formAction(formData);
-      }} className="space-y-8 w-full md:w-1/2 mt-12 sm:mt-0">
-        <InputField icon="/icons/NameField.svg" placeholder="Your Name" name="name" value={name} setValue={setName} />
-        <InputField icon="/icons/email.svg" placeholder="Your Email" name="email" value={email} setValue={setEmail}/>
-        <InputField
-          icon="/icons/YourThoughts.svg"
-          customWidth={30}
-          placeholder="Tell us about your inquiry"
-          wide={true}
-          name="message"
-          value={message}
-          setValue={setMessage}
-        />
-        <SendButton/>
-      </form>
+      }}
+      className="space-y-8 w-full md:w-1/2 mt-12 sm:mt-0"
+    >
+      <InputField
+        icon="/icons/NameField.svg"
+        placeholder="Your Name"
+        name="name"
+        value={name}
+        setValue={setName}
+      />
+      <InputField
+        icon="/icons/email.svg"
+        placeholder="Your Email"
+        name="email"
+        value={email}
+        setValue={setEmail}
+      />
+      <InputField
+        icon="/icons/YourThoughts.svg"
+        customWidth={30}
+        placeholder="Tell us about your inquiry"
+        wide={true}
+        name="message"
+        value={message}
+        setValue={setMessage}
+      />
+      <SendButton />
+    </form>
   );
 };
 
