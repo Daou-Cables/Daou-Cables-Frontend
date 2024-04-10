@@ -5,10 +5,10 @@ import Button from "./Button";
 
 export default function OurProducts() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-red-500">
+    <div className="flex flex-col items-center justify-center">
       <SectionTitle title="Our Products" />
       <Products />
-      <Button title="View All" url="/products" className="mt-32" />
+      <Button title="View All" url="/products" className="mt-28" />
     </div>
   );
 }
