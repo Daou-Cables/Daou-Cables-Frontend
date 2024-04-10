@@ -1,14 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const SearchBar = () => {
+  const [focus, setFocus] = useState<boolean>(false);
+
   return (
-    <div className="flex items-center py-2 px-4 shadow bg-white ml-4 mr-2 rounded">
+    <div className="flex items-center h-10 px-4 shadow bg-white ml-5 mr-2 rounded">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-5 h-5 opacity-60"
+        // transform x to the left on focus
+        className={`w-4 h-4 opacity-60 transition-transform duration-300 ${
+          focus && "transform -translate-x-1"
+        }`}
       >
         <path
           fillRule="evenodd"
@@ -18,7 +23,12 @@ const SearchBar = () => {
       </svg>
 
       <input
-        className="ml-2 outline-none bg-transparent text-xs"
+        onClick={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
+        className={`ml-1 transition-colors outline-none bg-transparent text-xs ${
+          focus && "placeholder-white"
+        }`}
+        style={{}}
         type="text"
         placeholder="Search Products"
       />

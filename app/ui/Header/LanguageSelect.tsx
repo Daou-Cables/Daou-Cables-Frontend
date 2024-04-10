@@ -3,16 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+const languages = ["Ar", "Cn", "En", "Es", "Fr", "Jp"];
+
 const LanguageDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("En");
 
-  const languages = ["Ar", "Cn", "En", "Es", "Fr", "Jp"];
-
   return (
     <div className="relative inline-block text-left ml-2 z-50">
       <button
-        className="inline-flex mr-5 justify-between border-none max-w-24 items-center drop-shadow-lg py-2 px-4 shadow-sm bg-white border-2 border-gray-300 cursor-pointer"
+        className="rounded inline-flex mr-5 justify-between border-none max-w-24 items-center py-2 px-4 shadow bg-white border-2 border-gray-300 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image
