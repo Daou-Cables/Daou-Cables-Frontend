@@ -11,13 +11,11 @@ type Props = {
 
 const SectionWithText = ({ title, url, text, reversed = false }: Props) => {
   return (
-    <div>
-      <div className="pt-24">
-        <div className="flex items-center justify-center">
-          <SectionTitle title={title} />
-        </div>
-        <ImageWithText url={url} alt={title} text={text} reversed={reversed} />
+    <div className="pt-24">
+      <div className="flex items-center justify-center">
+        <SectionTitle title={title} />
       </div>
+      <ImageWithText url={url} alt={title} text={text} reversed={reversed} />
     </div>
   );
 };

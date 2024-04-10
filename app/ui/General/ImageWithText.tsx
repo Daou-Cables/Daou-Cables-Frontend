@@ -2,36 +2,35 @@ import React from "react";
 import Image from "next/image";
 
 type Props = {
-    url: string;
-    alt: string;
-    text: string;
-    reversed?: boolean;
+  url: string;
+  alt: string;
+  text: string;
+  reversed?: boolean;
 };
 
 function ImageWithText({ url, alt, text, reversed = false }: Props) {
-    return (
+  return (
+    <div className={`mt-20 flex flex-col md:items-stretch  space-y-10 md:space-y-0 md:justify-between  ${reversed ? "md:flex-row-reverse" : "md:flex-row"}`}>
+      <div className="md:w-[50%]">
+        <Image
+          className="max-w-[550px] w-full object-contain"
+          src={url}
+          alt={alt}
+          width={700}
+          height={537}
+          objectFit="contain"
+        />
+      </div>
+      <div className="md:w-[50%] md:ml-8 flex flex-col justify-between py-6">
         <div>
-            <div className="pt-20 flex flex-col md:flex-row justify-between items-center md:px-40 space-x-0 md:space-x-20">
-                <div
-                    className={`${
-                        reversed ? "md:hidden" : ""
-                    } flex items-center justify-center w-full md:w-1/2`}
-                >
-                    <Image src={url} alt={alt} height={750} width={750} />
-                </div>
-                <div className="mt-8 sm:mt-12 h-full w-full md:w-1/2 md:px-0">
-                    <p className="text-xl sm:text-2xl md:text-4xl">{text}</p>
-                </div>
-                <div
-                    className={`hidden ${
-                        reversed ? "md:block" : ""
-                    } mt-8 flex items-center justify-center w-full md:w-1/2`}
-                >
-                    <Image src={url} alt={alt} height={750} width={750} />
-                </div>
-            </div>
+          <h4 className="text-3xl">We are some title</h4>
+          <p className="text-base mt-10 max-w-xl">
+            {text}
+          </p>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default ImageWithText;
