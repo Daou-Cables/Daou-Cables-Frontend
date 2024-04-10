@@ -3,12 +3,12 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center drop-shadow-lg py-2 px-4 shadow-sm bg-white ml-4 mr-2">
+    <div className="flex items-center py-2 px-4 shadow bg-white ml-4 mr-2 rounded">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-6 h-6"
+        className="w-5 h-5 opacity-60"
       >
         <path
           fillRule="evenodd"
@@ -18,7 +18,7 @@ const SearchBar = () => {
       </svg>
 
       <input
-        className="ml-2 outline-none bg-transparent"
+        className="ml-2 outline-none bg-transparent text-xs"
         type="text"
         placeholder="Search Products"
       />

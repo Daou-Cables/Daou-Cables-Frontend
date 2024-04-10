@@ -16,7 +16,7 @@ const BannerOverlay = (props: Props) => {
           </p>
           <p className="text-white text-sm">Yangpu District</p>
           <p className="text-white text-sm">Shanghai 200438</p>
-        </div>            
+        </div>
       </div>
     </div>
   );
