@@ -4,7 +4,7 @@ import BottomFooter from "./BottomFooter";
 
 export default function Footer() {
   return (
-    <div className="bg-[#D9D9D9]">
+    <div className="bg-[#F5F5F5]">
       <FooterTop />
       <BottomFooter />
     </div>
