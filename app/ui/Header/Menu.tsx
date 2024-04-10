@@ -49,7 +49,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             <Link
               href={tab.link}
               onClick={() => setActiveTab(tab.title)}
-              className=" text-black mr-2"
+              className=" text-black mr-2 text-sm"
               onMouseEnter={() => setHoveredTab(tab.title)}
               onMouseLeave={() => setHoveredTab("")}
             >

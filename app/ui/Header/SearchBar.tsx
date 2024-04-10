@@ -3,15 +3,16 @@ import React, { useState } from "react";
 
 const SearchBar = () => {
   const [focus, setFocus] = useState<boolean>(false);
+  console.log(focus);
 
   return (
-    <div className="flex items-center h-10 px-4 shadow bg-white ml-5 mr-2 rounded">
+    <div className="flex items-center h-10 px-4 shadow bg-white ml-6 mr-2 rounded">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
         // transform x to the left on focus
-        className={`w-4 h-4 opacity-60 transition-transform duration-300 ${
+        className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
           focus && "transform -translate-x-1"
         }`}
       >
@@ -25,10 +26,9 @@ const SearchBar = () => {
       <input
         onClick={() => setFocus(true)}
         onBlur={() => setFocus(false)}
-        className={`ml-1 transition-colors outline-none bg-transparent text-xs ${
-          focus && "placeholder-white"
+        className={`ml-1 transition outline-none bg-transparent text-xs ${
+          focus ? "placeholder-white" : "placeholder-gray-400"
         }`}
-        style={{}}
         type="text"
         placeholder="Search Products"
       />
