@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className="flex-1 md:ml-36">
           <div>
             <h4 className="text-3xl">Why Choose Us?</h4>
-            <p className="text-xl mt-10 max-w-xl">
+            <p className="text-base mt-10 max-w-xl">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
               impedit dolores laborum cumque debitis eos necessitatibus, sint
               assumenda, totam blanditiis recusandae deserunt hic beatae
@@ -30,7 +30,11 @@ export default function AboutUs() {
             </p>
           </div>
           <div className="flex items-center justify-center sm:block">
-            <Button title="Learn More" url="/about-us" className="mt-32"/>
+            <Button
+              className="mt-48 sm:w-46 p-2"
+              title="Learn More"
+              url="/about-us"
+            />
           </div>
         </div>
       </div>
