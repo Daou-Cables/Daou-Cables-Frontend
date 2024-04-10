@@ -12,7 +12,7 @@ const LanguageDropdown = () => {
   return (
     <div className="relative inline-block text-left ml-2 z-50">
       <button
-        className="rounded inline-flex mr-5 justify-between border-none max-w-24 items-center py-2 px-4 shadow bg-white border-2 border-gray-300 cursor-pointer"
+        className="rounded inline-flex justify-between border-none max-w-24 items-center py-2 px-4 shadow bg-white border-2 border-gray-300 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image
@@ -42,7 +42,7 @@ const LanguageDropdown = () => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-1 max-w-24 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 mr-5"
+          className="origin-top-right bg-white absolute left-0 mt-1 max-w-24 shadow rounded ring-1 ring-black ring-opacity-5 focus:outline-none z-10 mr-5"
           style={{ width: "max-content", minWidth: "6rem" }}
         >
           <div

@@ -7,25 +7,25 @@ import Footer from "./ui/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: {
-        template: "%s | Daou Cables",
-        default: "Daou Cables",
-    },
-    description: "",
+  title: {
+    template: "%s | Daou Cables",
+    default: "Daou Cables",
+  },
+  description: "",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en">
-            <body className={inter.className}>
-                <Header />
-                <div className="pt-32 px-4 sm:px-12">{children}</div>
-                <Footer />
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        <div className="pt-32 px-4 sm:px-14">{children}</div>
+        <Footer />
+      </body>
+    </html>
+  );
 }
