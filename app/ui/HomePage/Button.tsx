@@ -12,9 +12,9 @@ export default function Button({ title, url, className }: Props) {
   return (
     <Link href={url} passHref>
       <button
-        className={`p-3 w-52 sm:w-72 shadow-black duration-300 bg-black flex items-center justify-end px-12 shadow transition -skew-x-12 hover:bg-white group border-[1px] border-transparent hover:border-black hover:shadow-none ${className}`}
+        className={`p-3 w-52 sm:w-64 shadow-black duration-300 bg-black flex items-center justify-end px-12 shadow transition -skew-x-12 hover:bg-white group border-[1px] border-transparent hover:border-black hover:shadow-none ${className}`}
       >
-        <span className="text-white duration-300 transition group-hover:text-black text-xl font-medium skew-x-12">
+        <span className="text-white duration-300 transition group-hover:text-black text-base font-medium skew-x-12 text-nowrap">
           {title}
         </span>
         <svg

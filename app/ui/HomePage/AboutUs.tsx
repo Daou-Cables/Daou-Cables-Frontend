@@ -33,11 +33,7 @@ export default function AboutUs() {
             </p>
           </div>
           <div className="flex items-center justify-center sm:block">
-            <Button
-              className="sm:w-46 p-2"
-              title="Learn More"
-              url="/about-us"
-            />
+            <Button className="p-2" title="Learn More" url="/about-us" />
           </div>
         </div>
       </div>
