@@ -1,8 +1,6 @@
 import React from "react";
 import PageHeader from "../ui/General/PageHeader";
 import Head from "../ui/ContactUs/Head";
-import ContactUsForm from "../ui/ContactUs/ContactUsForm";
-import ContactUsImage from "../ui/ContactUs/ContactUsImage";
 import ContactUs from "../ui/ContactUs/ContactUs";
 import ReachUs from "../ui/ContactUs/ReachUs";
 
