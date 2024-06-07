@@ -44,3 +44,10 @@ export interface ContactUsData {
     wechat: Url[];
     facebook: Url;
 }
+
+export interface Certificate {
+    name: string;
+    description: string;
+    preview: string;
+    file: string;
+}
