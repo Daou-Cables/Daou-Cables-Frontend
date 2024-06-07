@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../ui/General/PageHeader";
 import Image from "next/image";
+import ContactUs from "../ui/General/ContactUs";
 
 type Props = {};
 
@@ -36,6 +37,9 @@ export default function ProductsPage({}: Props) {
           <ProductCard product={product} key={index} />
         ))}
       </div>
+
+      <ContactUs />
+
     </div>
   );
 }
@@ -64,6 +68,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <h1 className="font-bold">{product.name}</h1>
         <p className="text-opacity-70">{product.description}</p>
       </div>
+
     </div>
   );
 };
